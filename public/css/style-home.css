@@ -1,0 +1,75 @@
+.selector{
+    background-color: rgb(255, 255, 255);
+}
+
+.form-container {
+    max-width: 1200px;
+    height: 180px;
+    display: flex; 
+    place-items: center;
+    background-color: rgb(235, 235, 235);
+}
+.form-container .form-group {
+    flex: 1;
+    min-width: 150px;
+    margin-right: 10px;
+}
+.form-container .form-group:last-child {
+    margin-right: 0;
+}
+.btn-search {
+    flex: 0.5;
+}
+
+.container-carrusel {
+    overflow: hidden;
+    padding: 2rem 5rem 0 5rem; 
+}
+.carousel-item img {
+    border-radius: 30px; 
+}
+
+.title {
+    padding: 3rem 0rem 3rem 8rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem 3rem 5rem;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.card {
+    transition: transform 0.2s; 
+}
+
+.card-link:hover .card {
+    transform: scale(1.05); 
+}
+
+.titulo{
+    padding: 3rem 0 1rem 8rem;
+}
+
+.horizontes h1{
+    padding-left: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+a {
+    text-decoration: none !important; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto del elemento padre */
+    transition: color 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+}
+
+a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño (opcional) */
+}
