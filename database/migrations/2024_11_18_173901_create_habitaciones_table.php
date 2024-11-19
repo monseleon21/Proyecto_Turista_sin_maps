@@ -17,7 +17,10 @@ return new class extends Migration
             $table->integer('numero_habitacion');
             $table->integer('precio_noche');
             $table->integer('capacidad-personas');
+<<<<<<< HEAD
             $table->foreign('id_hotel')->references('id')->on('hoteles');
+=======
+>>>>>>> 52168fb (Migraciones de bases de datos)
             $table->timestamps();
         });
     }
