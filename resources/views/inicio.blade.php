@@ -73,7 +73,7 @@
             </div>
             <div class="form-group">
                 <label for="departure-date">Fecha de salida</label>
-                <input type="date" class="form-control" id="departure-date">
+                <input type="date" class="form-control" id="departure-dateid="departure-date">
             </div>
             <div class="form-group">
                 <label for="return-date">Fecha de regreso</label>
@@ -89,14 +89,6 @@
                     <option>5</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="class">Clase</label>
-                <select id="class" class="form-control">
-                    <option selected>Económica</option>
-                    <option>Ejecutiva</option>
-                    <option>Primera</option>
-                </select>
-            </div>
             <div class="form-group btn-search">
                 <button type="submit" class="btn btn-primary btn-block">Buscar</button>
             </div>
@@ -105,7 +97,6 @@
 </div>
 
 <div class="maletas">
-    
     <div class="titulo">
         <h1>Prepara las maletas</h1>
     </div>

@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVistas;
 
-route::get('/',[controladorVistas::class, 'inicio'])->name('rutainicio');
+
+route::get('/',[controladorVistas::class, 'home'])->name('rutahome');
+
+route::get('/inicio',[controladorVistas::class, 'inicio'])->name('rutainicio');
 route::get('/vuelos',[controladorVistas::class, 'vuelos'])->name('rutavuelos');
 route::get('/hospedajes',[controladorVistas::class, 'hospedajes'])->name('rutahospedajes');
 
