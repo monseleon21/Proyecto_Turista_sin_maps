@@ -12,13 +12,13 @@
     <style>
 
         .navbar {
-            background-color: #FF7F50;
+            background-color: white;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         
         .navbar .navbar-brand, 
         .navbar .nav-link {
-            color: #ffffff; 
+            color: black;
         }
 
         .navbar .nav-link:hover {
@@ -53,7 +53,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{{ route('rutainicio') }}">TuristaSinMaps <i class="bi bi-geo-alt fs-4"></i></a>
+          <a class="navbar-brand" href="{{ route('rutahome') }}">TuristaSinMaps <i class="bi bi-geo-alt fs-4"></i></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>

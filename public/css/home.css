@@ -1,0 +1,104 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+}
+
+.search-container {
+    height: 320px;
+    width: 100%; 
+    background-color: black;
+    
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    margin-bottom: 55px;
+    color: white;
+    display: flex;
+    gap: 115px;
+}
+
+.option-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+/* Hover para los botones */
+.option-btn:hover {
+    color: #FFD700; /* Cambia a dorado en hover */
+    font-size: 22px;
+}
+
+/* Evitar que el botón cambie su tamaño al enfocarse */
+.option-btn:focus {
+    outline: none;
+}
+
+.btn-container {
+    display: flex;
+    gap: 25px;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+/* Mostrar sección seleccionada */
+.btn-container.visible {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
+.btn-l {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.btn-btm {
+    display: flex;
+    gap: 25px;
+}
+
+.input-btn {
+    height: auto;
+    border-radius: 12px;
+    display: flex;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.create-btn {
+    height: 45px;
+    width: 250px;
+    border-radius: 8px;
+    background-color: #000148;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-btn:hover {
+    background-color: #002070;
+}
