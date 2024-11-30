@@ -11,12 +11,28 @@ class controladorVistas extends Controller
 {
     
     public function home(){
-        return view('home');
+        return view('users/home');
     }
     
-    public function inicio(){
-        return view('inicio');
+    public function login(){
+        return view('users/login');
     }
+
+    public function logup(){
+        return view('users/logup');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function vuelos(){
         return view('vuelos');
@@ -46,7 +62,7 @@ class controladorVistas extends Controller
         $name = $peticionValidada->input('name');
 
         session()->flash('successfully-registered', 'Gracias por tu registro, ' . $name);
-        return to_route('rutainicio');
+        return to_route('rutalogin');
     }
     public function procesarVuelo(validadorVuelo $peticionValidada){
         $flightNumber = $peticionValidada->input('flightNumber');
