@@ -23,7 +23,10 @@ class validadorRegistro extends FormRequest
     {
         return [
             'name' => 'required|max:255',
+            'lastname' => 'required|max:255',
             'email' => 'required|email:rfc,dns|unique:users',
+            'email' => 'required|email:rfc,dns|unique:users',
+            'phone'=>'required|numeric',
             'password' => 'required|min:8',
             'confirm-password' => 'required|min:8|same:password'
         ];

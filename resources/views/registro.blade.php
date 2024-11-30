@@ -28,7 +28,7 @@
 </head>
 <body>
     <div class="logo">
-        <a href="{{ route('rutainicio') }}">TuristaSinMaps <i class="bi bi-geo-alt fs-4"></i></a>
+        <a href="{{ route('rutahome') }}">TuristaSinMaps <i class="bi bi-geo-alt fs-4"></i></a>
     </div>
 
     <div class="container d-flex justify-content-center align-items-center">
