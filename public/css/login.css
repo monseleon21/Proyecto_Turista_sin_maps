@@ -1,0 +1,107 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container-i {
+    width: 474px;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(93, 93, 94, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.title {
+    color: #000148;
+    font-size: 24px;
+    margin: 0;
+}
+
+.icon {
+    color: #000148;
+    font-size: 25px;
+}
+
+.welcome-text {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.info-text {
+    font-size: 12px;
+    text-align: center;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.input-btn {
+    height: auto;
+    width: 250px;  
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label-text {
+    font-size: 12px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.create-btn {
+    height: 45px;
+    width: 250px;  
+    border-radius: 8px;
+    background-color: #000148;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+}
+.create-btn:hover {
+    background-color: #002070;
+}
+
+.contact-info {
+    margin: 10px 0;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #bd14a9;
+}

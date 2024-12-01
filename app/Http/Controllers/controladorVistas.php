@@ -10,9 +10,33 @@ use Illuminate\Http\Request;
 class controladorVistas extends Controller
 {
     
-    public function inicio(){
-        return view('inicio');
+    public function home(){
+        return view('users/home');
     }
+    
+    public function login(){
+        return view('users/login');
+    }
+
+    public function signup(){
+        return view('users/singup');
+    }
+
+    public function flights(){
+        return view('users/flights');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function vuelos(){
         return view('vuelos');
@@ -42,7 +66,7 @@ class controladorVistas extends Controller
         $name = $peticionValidada->input('name');
 
         session()->flash('successfully-registered', 'Gracias por tu registro, ' . $name);
-        return to_route('rutainicio');
+        return to_route('rutalogin');
     }
     public function procesarVuelo(validadorVuelo $peticionValidada){
         $flightNumber = $peticionValidada->input('flightNumber');
