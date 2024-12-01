@@ -122,7 +122,7 @@
 }
 
 .tarjeta-hotel {
-    height: 180px;
+    height: 230px;
     display: flex;
     border: 1px solid #ccc;
     width: 100%;
@@ -132,7 +132,7 @@
 .img-hotel {
     background-color: black;
     border-radius: 12px 0 0 12px;
-    height: 180px;
+    height: 230px;
     width: 250px;
 }
 

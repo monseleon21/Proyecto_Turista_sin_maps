@@ -1,0 +1,57 @@
+
+.tarjeta-vuelo{
+    height: 115px;
+    display: flex;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 12px;
+
+}
+
+.img-vuelo{
+    background-color: black;
+    border-radius: 12px 0 0 12px;
+    height: 115px;
+    width: 125px;
+}
+img{
+    height: 115px;
+    width: 125px;
+    border-radius: 12px 0 0 12px;
+}
+
+.info-vuelo{
+    width: 580px;
+    padding: 30px;
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-origen{
+    display: flex;
+    flex-direction: column;
+}
+.info-destino{
+    display: flex;
+    flex-direction: column;
+}
+.info-duracion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-escalas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.precio-vuelo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}

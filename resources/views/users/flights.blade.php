@@ -88,40 +88,50 @@
                     </button>
                 </div>
             </form>
-            <div class="tarjeta-vuelo">
-                <div class="img-vuelo">
-                    <img src="{{ asset('img/japan.png') }}" alt="">
-                </div>
-                <div class="info-vuelo">
-                    <div class="info-origen">
-                        <span style="font-size: 20px; font-weight: bold;">00:00 AM</span>
-                        <span>Origen</span>
-                    </div>
-                    <div class="info-duracion">
-                        <i class="bi bi-airplane" style="transform: rotate(90deg);"></i>
-                        <span>Duracion del vuelo</span>
-                    </div>
-                    <div class="info-destino">
-                        <span style="font-size: 20px; font-weight: bold;">00:00 PM</span>
-                        <span>Destino</span>                        
-                    </div>
-                    <div class="info-escalas">
-                        <span>Escalas</span>     
-                        <span>X</span>                  
-                    </div>
-                </div>
-                <div class="precio-vuelo">
-                    <div class="top" style="display:flex; flex-direction:column;">
-                        <span style="font-size: 20px; font-weight: bold;">MXN PRECIO</span>
-                        <span style="font-size:16px;">Últimos</span>
-                    </div>
-                    <div class="btn-seguir">
-                        <a href="#" style="text-decoration: none;">
-                            <b style="font-size:16px;">Reservar</b>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <x-flight-card 
+                imagen="{{ asset('img/Volaris.png') }}" 
+                horaOrigen="10:00 AM" 
+                origen="Ciudad de México" 
+                duracion="" 
+                horaDestino="11:45 AM" 
+                destino="Tokio" 
+                escalas="1 Escala" 
+                precio="12,000 MXN" 
+                ultimos="5 boletos disponibles" 
+                rutaReserva="{{ route('rutalogin') }}" 
+                aerolinea="Volaris"
+            />
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const vuelos = document.querySelectorAll('.tarjeta-vuelo');
+
+                    vuelos.forEach(function (vuelo) {
+                        const horaOrigen = vuelo.querySelector('.info-origen span:nth-child(1)').innerText;
+                        const horaDestino = vuelo.querySelector('.info-destino span:nth-child(1)').innerText;
+
+                        const origen = convertirAHora(horaOrigen);
+                        const destino = convertirAHora(horaDestino);
+
+                        const duracion = calcularDuracion(origen, destino);
+
+                        vuelo.querySelector('.info-duracion span').innerText = duracion;
+                    });
+
+                    function convertirAHora(horaTexto) {
+                        const hora = new Date('1970-01-01 ' + horaTexto);
+                        return hora;
+                    }
+
+                    function calcularDuracion(inicio, fin) {
+                        const diferencia = fin - inicio;
+                        const horas = Math.floor(diferencia / (1000 * 60 * 60));
+                        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+
+                        return `${horas}h ${minutos}m`;
+                    }
+                });
+            </script>
         </div>
     </div>
 </div>

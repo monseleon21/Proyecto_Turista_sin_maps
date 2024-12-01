@@ -88,30 +88,19 @@
                     </button>
                 </div>
             </form>
-            <div class="tarjeta-hotel">
-                <div class="img-hotel">
-                    <img src="{{ asset('img/japan.png') }}" alt="">
-                </div>
-                <div class="info-hotel">
-                    <div class="info-ubicacion">
-                        <span>Ubicación</span>
-                        <span style="font-size: 20px; font-weight: bold;">Nombre del hotel</span>
-                        <span style="margin-top: 20px;">Dirección del hotel</span>    
-                        <span style="margin-top: 20px;">Calificación del hotel</span>            
-                    </div>
-                </div>
-                <div class="precio-hotel">
-                    <div class="top" style="display:flex; flex-direction:column; margin-bottom:15px;">
-                        <span style="font-size: 20px; font-weight: bold;">MXN PRECIO</span>
-                        <span style="font-size:16px;">Últimos lugares</span>
-                    </div>
-                    <div class="btn-reservar">
-                        <a href="#" style="text-decoration: none;">
-                            <b style="font-size:16px;">Reservar</b>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
+        <x-hotel-card 
+            imagen="{{ asset('img/japan.png') }}" 
+            ubicacion="Tokio, Japón" 
+            nombreHotel="Hotel Sakura" 
+            direccion="123 Cherry Blossom St." 
+            calificacion="5 Estrellas" 
+            servicios="Wi-Fi, Spa, Piscina" 
+            precio="3,500 MXN" 
+            ultimosLugares="Últimos 3 lugares" 
+            rutaReserva="{{ route('rutalogin') }}" 
+        />
+
         </div>
     </div>
 </div>
