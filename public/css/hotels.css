@@ -1,0 +1,171 @@
+.hoteles-container {
+    display: flex;
+    justify-content: center;
+    padding: 35px 40px;
+    gap: 25px;
+}
+
+.filtros-panel {
+    width: 363px;
+    padding: 25px;
+    background-color: #F8F8F8;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.filtros-panel h1 {
+    font-size: 16px;
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.filtros-contenidos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filtro-seccion {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro-seccion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filtro-seccion ul li {
+    margin-bottom: 5px; 
+}
+
+.input-precio {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 10px;
+    width: 150px;
+    height: 45px;
+}
+
+.precio-inputs{
+    display: flex;
+    gap: 12px;
+}
+
+.btn-aplicar {
+    margin-top: 10px;
+    height: 45px;
+    width: 100%; 
+    border-radius: 8px;
+    background-color: #000148;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-aplicar:hover {
+    background-color: #002070; 
+}
+
+.resultados-panel {
+    width: 900px;
+    height: 200px;
+}
+
+.resultados-contenidos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.busqueda-panel {
+    display: flex;
+    gap: 20px;
+}
+
+.campos-busqueda {
+    display: flex;
+    gap: 25px;
+}
+
+.input-destino,
+.input-fechas,
+.input-huespedes {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 10px;
+    width: 240px;
+    height: 45px;
+}
+
+.btn-buscar {
+    height: 45px;
+    width: 100%; 
+    border-radius: 8px;
+    background-color: #000148;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buscar:hover {
+    background-color: #002070; 
+}
+
+.tarjeta-hotel {
+    height: 180px;
+    display: flex;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.img-hotel {
+    background-color: black;
+    border-radius: 12px 0 0 12px;
+    height: 180px;
+    width: 250px;
+}
+
+img {
+    height: 180px;
+    width: 250px;
+    border-radius: 12px 0 0 12px;
+}
+
+.info-hotel {
+    padding: 30px;
+    gap: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-ubicacion {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+}
+
+.precio-hotel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
+
+.btn-reservar a {
+    text-decoration: none;
+    font-size: 16px;
+}

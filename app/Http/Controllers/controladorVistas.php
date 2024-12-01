@@ -26,48 +26,27 @@ class controladorVistas extends Controller
         return view('users/flights');
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    public function vuelos(){
-        return view('vuelos');
+    public function hotels(){
+        return view('users/hotels');
     }
 
-    public function sesion(){
-        return view('sesion');
+    public function adminv(){
+        return view('managements/manage_flights');
     }
 
-    public function registro(){
-        return view('registro');
+    public function adminh(){
+        return view('managements/manage_hotels');
     }
 
-    public function hospedajes(){
-        return view('hospedajes');
-    }
 
-    public function agregarVuelos(){
-        return view('agregarVuelos');
-    }
-
-    public function agregarHoteles(){
-        return view('agregarHoteles');
-    }
-
+    
     public function procesarRegistro(validadorRegistro $peticionValidada){
         $name = $peticionValidada->input('name');
 
         session()->flash('successfully-registered', 'Gracias por tu registro, ' . $name);
         return to_route('rutalogin');
     }
+    
     public function procesarVuelo(validadorVuelo $peticionValidada){
         $flightNumber = $peticionValidada->input('flightNumber');
 

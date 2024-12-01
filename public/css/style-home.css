@@ -64,12 +64,12 @@
 }
 
 a {
-    text-decoration: none !important; /* Elimina el subrayado */
-    color: inherit; /* Hereda el color del texto del elemento padre */
-    transition: color 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+    text-decoration: none !important; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+    color: #000148;
 }
 
 a:hover {
-    color: #007bff; /* Cambia el color al pasar el mouse */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño (opcional) */
+    color: #007bff; 
+    transform: scale(1.05); 
 }
