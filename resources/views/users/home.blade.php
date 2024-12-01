@@ -25,55 +25,59 @@
             <button id="option-paquetes" class="option-btn">Paquetes</button>
         </div>
         
-        <div class="btn-container" id="vuelos">
-            <div class="btn-l">
-                <div class="btn-top">
-                    <label class="input-btn">
-                        <input type="text" id="origin" style="font-size: 16px; border-radius: 8px 0 0 8px; width: 400px;" placeholder="Origen">
-                        <input type="text" id="destination" style="font-size: 16px; border-radius: 0 8px 8px 0; width: 400px;" placeholder="Destino">
-                    </label>
-                </div>
-                <div class="btn-btm">
-                    <label class="input-btn">
-                        <input type="text" id="departure-date" style="font-size: 16px; border-radius: 8px 0 0 8px; width: 250px;" placeholder="Fecha salida">
-                        <input type="text" id="return-date" style="font-size: 16px; border-radius: 0 8px 8px 0; width: 250px;" placeholder="Fecha regreso">
-                    </label>
-                    
-                    <label class="input-btn">
-                        <input type="text" id="passengers" style="font-size: 16px; width: 275px;" placeholder="N° Pasajeros">
+        <form action="{{ route('rutavuelos') }}" method="GET">
+            <div class="btn-container" id="vuelos">
+                <div class="btn-l">
+                    <div class="btn-top">
+                        <label class="input-btn">
+                            <input type="text" id="origin" style="font-size: 16px; border-radius: 8px 0 0 8px; width: 400px;" placeholder="Origen">
+                            <input type="text" id="destination" style="font-size: 16px; border-radius: 0 8px 8px 0; width: 400px;" placeholder="Destino">
+                        </label>
+                    </div>
+                    <div class="btn-btm">
+                        <label class="input-btn">
+                            <input type="text" id="departure-date" style="font-size: 16px; border-radius: 8px 0 0 8px; width: 250px;" placeholder="Fecha salida">
+                            <input type="text" id="return-date" style="font-size: 16px; border-radius: 0 8px 8px 0; width: 250px;" placeholder="Fecha regreso">
+                        </label>
                         
-                    </label>
+                        <label class="input-btn">
+                            <input type="text" id="passengers" style="font-size: 16px; width: 275px;" placeholder="N° Pasajeros">
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-r">
+                    <button type="submit" class="create-btn">Buscar</button>
                 </div>
             </div>
-            <div class="btn-r">
-                <button type="submit" class="create-btn ">Buscar</button>
-            </div>
-        </div>
+        </form>
 
-        <div class="btn-container" id="hospedajes">
-            <div class="btn-l">
-                <div class="btn-top">
-                    <label class="input-btn">
-                        <input type="text" id="destination" style="font-size: 16px; border-radius: 8px; width: 800px;" placeholder="Destino">
-                    </label>
+        <form action="{{ route('rutahospedajes') }}" method="GET">
+            <div class="btn-container" id="hospedajes">
+                <div class="btn-l">
+                    <div class="btn-top">
+                        <label class="input-btn">
+                            <input type="text" id="destination" style="font-size: 16px; border-radius: 8px; width: 800px;" placeholder="Destino">
+                        </label>
+                    </div>
+                    <div class="btn-btm">
+                        <label class="input-btn">
+                            <input type="text" name="departure_date" style="font-size: 16px; border-radius: 8px 0 0 8px; width: 207.5px;" placeholder="Fecha salida">
+                            <input type="text" name="return_date" style="font-size: 16px; border-radius: 0 8px 8px 0; width: 207.5px;" placeholder="Fecha regreso">
+                        </label>
+                        
+                        <label class="input-btn">
+                            <input type="text" name="guests" style="font-size: 16px; border-radius: 8px 0 0 8px; width: 180px;" placeholder="N° Huespedes">
+                            <input type="text" name="rooms" style="font-size: 16px; border-radius: 0 8px 8px 0; width: 180px;" placeholder="N° Habitaciones">
+                        </label>
+                    </div>
                 </div>
-                <div class="btn-btm">
-                    <label class="input-btn">
-                        <input type="text" style="font-size: 16px; border-radius: 8px 0 0 8px; width: 207.5px;" placeholder="Fecha salida">
-                        <input type="text" style="font-size: 16px; border-radius: 0 8px 8px 0; width: 207.5px;" placeholder="Fecha regreso">
-                    </label>
-                    
-                    <label class="input-btn">
-                        <input type="text" style="font-size: 16px; width: 180px; border-radius: 8px 0 0 8px; width: 180px;" placeholder="N° Huespedes">
-                        <input type="text" style="font-size: 16px; width: 180px; border-radius: 0 8px 8px 0; width: 180px;" placeholder="N° Habitaciones">
-                    </label>
+                
+                <div class="btn-r">
+                    <button type="submit" class="create-btn">Buscar</button>
                 </div>
             </div>
-            
-            <div class="btn-r">
-                <button type="submit" class="create-btn ">Buscar</button>
-            </div>
-        </div>
+        </form>
+
 
         <div class="btn-container" id="paquetes">
             <div class="btn-l">
