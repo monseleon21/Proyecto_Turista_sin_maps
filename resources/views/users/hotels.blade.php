@@ -1,12 +1,12 @@
 @extends('layouts.navbar')
 
-@section('titulo', 'Vuelos')
+@section('titulo', 'Hoteles')
 
 @section('contenido')
 
-<link rel="stylesheet" href="{{ asset('css/vuelos.css') }}">
+<link rel="stylesheet" href="{{ asset('css/hotels.css') }}">
 
-<div class="vuelos-cantainer">
+<div class="hoteles-container">
     <div class="filtros-panel">
         <div class="filtros-contenidos">
             <div class="filtro-seccion"> 
@@ -18,56 +18,56 @@
                 <button class="btn-aplicar" type="submit">Aplicar filtros</button>
             </div>
             <div class="filtro-seccion">
-                <h1><b>Escalas</b></h1>
+                <h1><b>Calificación</b></h1>
                 <ul>
                     <li>
                         <label>
-                            <input type="checkbox" name="escalas[]" value="directo"> Directo
+                            <input type="checkbox" name="calificacion[]" value="1"> 1 estrella
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="checkbox" name="escalas[]" value="con_escalas"> Escalas
+                            <input type="checkbox" name="calificacion[]" value="2"> 2 estrellas
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="calificacion[]" value="3"> 3 estrellas
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="calificacion[]" value="4"> 4 estrellas
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="calificacion[]" value="5"> 5 estrellas
                         </label>
                     </li>
                 </ul>
             </div>
             <div class="filtro-seccion">
-                <h1><b>Aerolíneas</b></h1>
+                <h1><b>Servicios</b></h1>
                 <ul>
                     <li>
                         <label>
-                            <input type="checkbox" name="aerolineas[]" value="aerolinea_1"> Aerolínea 1
+                            <input type="checkbox" name="servicios[]" value="wifi"> Wifi incluido
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="checkbox" name="aerolineas[]" value="aerolinea_2"> Aerolínea 2
+                            <input type="checkbox" name="servicios[]" value="desayuno"> Desayuno y cena
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="checkbox" name="aerolineas[]" value="aerolinea_3"> Aerolínea 3
-                        </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="filtro-seccion">
-                <h1><b>Horarios de salida</b></h1>
-                <ul>
-                    <li>
-                        <label>
-                            <input type="checkbox" name="horarios[]" value="mañana"> Mañana
+                            <input type="checkbox" name="servicios[]" value="gimnasio"> Gimnasio
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="checkbox" name="horarios[]" value="tarde"> Tarde
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox" name="horarios[]" value="noche"> Noche
+                            <input type="checkbox" name="servicios[]" value="alberca"> Alberca
                         </label>
                     </li>
                 </ul>
@@ -81,41 +81,31 @@
                     <div class="campos-busqueda">
                         <input class="input-destino" type="text" name="destino" placeholder="Destino" style="font-size: 16px;">
                         <input class="input-fechas" type="text" name="fechas" placeholder="Fechas" style="font-size: 16px;">
-                        <input class="input-pasajeros" type="text" name="pasajeros" placeholder="N° Pasajeros" style="font-size: 16px;">
+                        <input class="input-huespedes" type="text" name="huespedes" placeholder="Número de huéspedes" style="font-size: 16px;">
                     </div>
                     <button class="btn-buscar" type="submit">
                         <i class="bi bi-search" style="font-size: 24px; color: white;"></i>
                     </button>
                 </div>
             </form>
-            <div class="tarjeta-vuelo">
-                <div class="img-vuelo">
+            <div class="tarjeta-hotel">
+                <div class="img-hotel">
                     <img src="{{ asset('img/japan.png') }}" alt="">
                 </div>
-                <div class="info-vuelo">
-                    <div class="info-origen">
-                        <span style="font-size: 20px; font-weight: bold;">00:00 AM</span>
-                        <span>Origen</span>
-                    </div>
-                    <div class="info-duracion">
-                        <i class="bi bi-airplane" style="transform: rotate(90deg);"></i>
-                        <span>Duracion del vuelo</span>
-                    </div>
-                    <div class="info-destino">
-                        <span style="font-size: 20px; font-weight: bold;">00:00 PM</span>
-                        <span>Destino</span>                        
-                    </div>
-                    <div class="info-escalas">
-                        <span>Escalas</span>     
-                        <span>X</span>                  
+                <div class="info-hotel">
+                    <div class="info-ubicacion">
+                        <span>Ubicación</span>
+                        <span style="font-size: 20px; font-weight: bold;">Nombre del hotel</span>
+                        <span style="margin-top: 20px;">Dirección del hotel</span>    
+                        <span style="margin-top: 20px;">Calificación del hotel</span>            
                     </div>
                 </div>
-                <div class="precio-vuelo">
-                    <div class="top" style="display:flex; flex-direction:column;">
+                <div class="precio-hotel">
+                    <div class="top" style="display:flex; flex-direction:column; margin-bottom:15px;">
                         <span style="font-size: 20px; font-weight: bold;">MXN PRECIO</span>
-                        <span style="font-size:16px;">Últimos</span>
+                        <span style="font-size:16px;">Últimos lugares</span>
                     </div>
-                    <div class="btn-seguir">
+                    <div class="btn-reservar">
                         <a href="#" style="text-decoration: none;">
                             <b style="font-size:16px;">Reservar</b>
                         </a>

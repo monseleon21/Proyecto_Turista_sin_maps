@@ -1,18 +1,8 @@
 @extends('layouts.navbar')
 
-@section('titulo', 'Vuelos')
+@section('titulo', 'Home')
 
 @section('contenido')
-
-@session('successfully-registered')
-    <script>
-        Swal.fire({
-            title: "Respuesta del sistema",
-            text: "{{$value}}",
-            icon: "success"
-        });
-    </script>
-@endsession
 
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 <link rel="stylesheet" href="{{ asset('css/style-home.css') }}">
@@ -51,7 +41,7 @@
             </div>
         </form>
 
-        <form action="{{ route('rutahospedajes') }}" method="GET">
+        <form action="{{ route('rutahoteles') }}" method="GET">
             <div class="btn-container" id="hospedajes">
                 <div class="btn-l">
                     <div class="btn-top">
