@@ -18,8 +18,12 @@ class controladorVistas extends Controller
         return view('users/login');
     }
 
-    public function logup(){
-        return view('users/logup');
+    public function signup(){
+        return view('users/singup');
+    }
+
+    public function flights(){
+        return view('users/flights');
     }
 
 

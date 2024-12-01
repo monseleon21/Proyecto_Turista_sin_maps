@@ -12,7 +12,7 @@
     <div class="container-i">
         <div class="header">
             <h1 style="color: #000148; font-size: 24px;">TuristaSinMaps</h1>
-            <i class="bi bi-map" style="color: #000148; font-size: 25px;"></i>
+            <i class="bi bi-map" style="color: #000148; font-size: 25px; margin-bottom:5px;"></i>
         </div>
         <h1 style="font-size: 20px;">Crear una cuenta</h1>
         <p style="font-size: 15px;">Regístrate, ingresa todos tus datos y descubre la mejor forma de viajar</p>

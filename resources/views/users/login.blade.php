@@ -12,7 +12,7 @@
     <div class="container-i">
         <div class="header">
             <h1 style="color: #000148; font-size: 24px; margin-bottom:10px;">TuristaSinMaps</h1>
-            <i class="bi bi-map" style="color: #000148; font-size: 25px;"></i>
+            <i class="bi bi-map" style="color: #000148; font-size: 25px; margin-bottom:5px;"></i>
         </div>
 
         <h1 style="font-size: 20px;">Bienvenido</h1>
@@ -31,9 +31,9 @@
             </div>
             <button class="create-btn" type="submit">Iniciar sesion</button>
         </form>
-
-        <p style="font-size: 16px;">¿No tienes una cuenta?  <b><a href="{{ route('rutalogup') }}" style="text-decoration: none;">Crea una</a></b></p>
-        <p style="font-size: 16px;"><b><a href="{{ route('rutalogup') }}" style="text-decoration: none;">¿Olvidaste tu contraseña? </a></b></p>
+ 
+        <p style="font-size: 16px;">¿No tienes una cuenta?  <b><a href="{{ route('rutasignup') }}" style="text-decoration: none;">Crea una</a></b></p>
+        <p style="font-size: 16px;"><b><a href="{{ route('rutasignup') }}" style="text-decoration: none;">¿Olvidaste tu contraseña? </a></b></p>
         <b><a href="{{ route('rutahome') }}" style="text-decoration: none; font-size: 18px;">Regresar</a></b>
     </div>
 </body>
