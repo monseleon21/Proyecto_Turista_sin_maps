@@ -23,6 +23,8 @@ return new class extends Migration
             $table->foreign('id_aerolinea')->references('id')->on('aerolineas');
             $table->foreign('id_origen')->references('id')->on('ciudades');
             $table->foreign('id_destino')->references('id')->on('ciudades');
+            $table->integer('asientos_totales');
+            $table->integer('asientos_disponibles');
             $table->integer('precio');
             $table->timestamps();
         });

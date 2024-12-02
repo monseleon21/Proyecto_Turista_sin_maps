@@ -16,6 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_ciudad');
             $table->string('hotel', 50);
             $table->foreign('id_ciudad')->references('id')->on('ciudades');
+            $table->integer('habitaciones_totales');
+            $table->integer('habitaciones_disponibles');
             $table->integer('precio_noche');
             $table->integer('estrellas');
             $table->string('descripcion', 200)->nullable();
