@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\VuelosController;
 
 // Rutas del controlador de vistas generales
 Route::get('/', [controladorVistas::class, 'home'])->name('rutahome');
@@ -21,3 +22,8 @@ Route::post('/usuarios', [UsuarioController::class, 'store'])->name('rutaGuardar
 Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy'])->name('rutaEliminarUsuario');
 
 Route::post('/signup', [UsuarioController::class, 'store'])->name('procesarRegistro');
+
+
+// Rutas para Vuelos
+Route::get('/flights-management', [VuelosController::class, 'create'])->name('rutaadminv');
+Route::post('/flights-management', [VuelosController::class, 'store'])->name('rutaadminv');
