@@ -88,19 +88,22 @@
                     </button>
                 </div>
             </form>
-            <x-flight-card 
-                imagen="{{ asset('img/Volaris.png') }}" 
-                horaOrigen="10:00 AM" 
-                origen="Ciudad de México" 
-                duracion="" 
-                horaDestino="11:45 AM" 
-                destino="Tokio" 
-                escalas="1 Escala" 
-                precio="12,000 MXN" 
-                ultimos="5 boletos disponibles" 
-                rutaReserva="{{ route('rutalogin') }}" 
-                aerolinea="Volaris"
-            />
+            @foreach($vuelos as $vuelo)
+                <x-flight-card 
+                    imagen="{{ asset('img/' . str_replace(' ', '', $vuelo->nombre_aerolinea) . '.png') }}"
+                    horaOrigen="{{ $vuelo->horario_salida }}" 
+                    origen="{{ $vuelo->origen }}" 
+                    duracion="" 
+                    horaDestino="{{ $vuelo->horario_llegada }}" 
+                    destino="{{ $vuelo->destino }}" 
+                    escalas="{{ $vuelo->escalas ? 'Con escalas' : 'Directo' }}"
+
+                    precio="{{ number_format($vuelo->precio_por_pasajero, 2) }} MXN" 
+                    ultimos="{{ $vuelo->disponibilidad_asientos }} boletos disponibles" 
+                    rutaReserva="{{ route('rutalogin') }}" 
+                    aerolinea="{{ $vuelo->nombre_aerolinea }}"
+                />
+            @endforeach
 
             <script>
                 document.addEventListener('DOMContentLoaded', function () {

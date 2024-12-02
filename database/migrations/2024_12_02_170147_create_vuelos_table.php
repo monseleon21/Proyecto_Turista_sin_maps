@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_vuelo');
             $table->string('numero_vuelo');
             $table->foreignId('aerolinea_id')
-                  ->constrained('aerolineas', 'id_aerolinea') // Especificamos la tabla y el campo
+                  ->constrained('aerolineas', 'id_aerolinea')
                   ->onDelete('cascade');
             $table->string('origen');
             $table->string('destino');
@@ -23,10 +23,11 @@ return new class extends Migration
             $table->date('fecha_llegada');
             $table->time('horario_salida');
             $table->time('horario_llegada');
+            $table->boolean('escalas')->default(false); // Nueva columna
             $table->decimal('precio_por_pasajero', 8, 2);
             $table->integer('disponibilidad_asientos');
             $table->timestamps();
-        });
+        });        
     }
 
     /**

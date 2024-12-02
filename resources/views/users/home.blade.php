@@ -15,7 +15,8 @@
             <button id="option-paquetes" class="option-btn">Paquetes</button>
         </div>
         
-        <form action="{{ route('rutavuelos') }}" method="GET">
+        <form action="{{ route('rutaVuelos') }}" method="GET">
+
             <div class="btn-container" id="vuelos">
                 <div class="btn-l">
                     <div class="btn-top">

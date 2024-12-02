@@ -23,8 +23,9 @@ class controladorVistas extends Controller
 
     public function flights()
     {
-        return view('users/flights');
+        return view('users.flights');
     }
+    
 
     public function hotels()
     {

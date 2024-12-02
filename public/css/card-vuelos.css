@@ -9,14 +9,16 @@
 }
 
 .img-vuelo{
-    background-color: black;
     border-radius: 12px 0 0 12px;
     height: 115px;
     width: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 img{
-    height: 115px;
-    width: 125px;
+    height: auto;
+    width: 115px;
     border-radius: 12px 0 0 12px;
 }
 

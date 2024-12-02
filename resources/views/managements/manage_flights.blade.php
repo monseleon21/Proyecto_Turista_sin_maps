@@ -62,6 +62,11 @@
                     @endforeach
                 </select>
             </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="escalas" name="escalas">
+                <label class="form-check-label" for="escalas">Tiene Escalas</label>
+            </div>
+
         </div>
 
         <!-- Precio y Número de Asientos -->

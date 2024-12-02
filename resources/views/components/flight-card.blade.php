@@ -19,7 +19,6 @@
             <span>{{ $destino }}</span>
         </div>
         <div class="info-escalas">
-            <span>Escalas</span>
             <span>{{ $escalas }}</span>
         </div>
     </div>

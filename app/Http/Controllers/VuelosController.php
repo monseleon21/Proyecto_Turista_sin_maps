@@ -41,6 +41,7 @@ class VuelosController extends Controller
             'fecha_llegada' => $request->input('fecha_llegada'),
             'horario_salida' => $request->input('horario_salida'),
             'horario_llegada' => $request->input('horario_llegada'),
+            'escalas' => $request->has('escalas'), // Verifica si el checkbox fue marcado
             'precio_por_pasajero' => $request->input('precio_por_pasajero'),
             'disponibilidad_asientos' => $request->input('disponibilidad_asientos'),
             'created_at' => now(),
