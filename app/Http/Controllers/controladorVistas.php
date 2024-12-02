@@ -2,61 +2,76 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\validadorRegistro;
-use App\Http\Requests\validadorVuelo;
-use App\Http\Requests\validadorHotel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\validadorRegistro;
 
 class controladorVistas extends Controller
 {
-    
-    public function home(){
+    public function home()
+    {
         return view('users/home');
     }
-    
-    public function login(){
+
+    public function login()
+    {
         return view('users/login');
     }
 
-    public function signup(){
+    public function signup()
+    {
         return view('users/singup');
     }
 
-    public function flights(){
+    public function flights()
+    {
         return view('users/flights');
     }
 
-    public function hotels(){
+    public function hotels()
+    {
         return view('users/hotels');
     }
 
-    public function adminv(){
+    public function adminv()
+    {
         return view('managements/manage_flights');
     }
 
-    public function adminh(){
+    public function adminh()
+    {
         return view('managements/manage_hotels');
     }
 
+    // Método para guardar un usuario
+    public function guardarUsuario(validadorRegistro $request)
+    {
+        DB::table('usuarios')->insert([
+            'nombre' => $request->input('name'),
+            'apellido' => $request->input('lastname'),
+            'email' => $request->input('email'),
+            'telefono' => $request->input('phone'),
+            'contraseña' => bcrypt($request->input('password')), // Encriptar la contraseña
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
 
-    
-    public function procesarRegistro(validadorRegistro $peticionValidada){
-        $name = $peticionValidada->input('name');
-
-        session()->flash('successfully-registered', 'Gracias por tu registro, ' . $name);
-        return to_route('rutalogin');
+        session()->flash('success', 'Registro exitoso. Por favor, inicia sesión.');
+        return redirect()->route('rutalogin');
     }
-    
-    public function procesarVuelo(validadorVuelo $peticionValidada){
-        $flightNumber = $peticionValidada->input('flightNumber');
 
-        session()->flash('successfully-added-flight', 'Vuelo número ' . $flightNumber .' agregado correctamente');
-        return to_route('rutaagregarvuelo');
+    // Método para mostrar los usuarios en el CRUD
+    public function mostrarUsuarios()
+    {
+        $usuarios = DB::table('usuarios')->get();
+        return view('managements.crud-user', ['usuarios' => $usuarios]);
     }
-    public function procesarHotel(validadorHotel $peticionValidada){
-        $hotelName = $peticionValidada->input('hotelName');
 
-        session()->flash('successfully-added-hotel', 'Hotel '. $hotelName .' agregado correctamente');
-        return to_route('rutaagregarhotel');
+    // Método para eliminar un usuario
+    public function eliminarUsuario($id)
+    {
+        DB::table('usuarios')->where('id_usuario', $id)->delete();
+        session()->flash('success', 'Usuario eliminado correctamente.');
+        return redirect()->route('crudUsers');
     }
 }

@@ -17,20 +17,28 @@
 
         <h1 style="font-size: 20px;">Bienvenido</h1>
         <p style="font-size: 18px;">Inicia sesión para continuar</p> 
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
 
-        <form class="contact-info">
+
+        <form class="contact-info" action="">
+            @csrf
             <div class="btns">
                 <label class="input-btn">
                     <span style="font-size: 14px;">Correo</span>
-                    <input type="text" style="font-size: 16px;" placeholder="Ingresa tu correo electronico">
+                    <input type="text" style="font-size: 16px;" name="email" placeholder="Ingresa tu correo electrónico" required>
                 </label>
                 <label class="input-btn">
                     <span style="font-size: 14px;">Contraseña</span>
-                    <input type="password" style="font-size: 16px;" placeholder="Ingresa tu contraseña">
+                    <input type="password" style="font-size: 16px;" name="password" placeholder="Ingresa tu contraseña" required>
                 </label>
             </div>
-            <button class="create-btn" type="submit">Iniciar sesion</button>
+            <button class="create-btn" type="submit">Iniciar sesión</button>
         </form>
+
  
         <p style="font-size: 16px;">¿No tienes una cuenta?  <b><a href="{{ route('rutasignup') }}" style="text-decoration: none;">Crea una</a></b></p>
         <p style="font-size: 16px;"><b><a href="{{ route('rutasignup') }}" style="text-decoration: none;">¿Olvidaste tu contraseña? </a></b></p>

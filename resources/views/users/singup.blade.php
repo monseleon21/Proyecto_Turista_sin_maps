@@ -17,7 +17,7 @@
         <h1 style="font-size: 20px;">Crear una cuenta</h1>
         <p style="font-size: 15px;">Regístrate, ingresa todos tus datos y descubre la mejor forma de viajar</p>
 
-            <form action="{{route('rutaprocesarregistro')}}" method="POST">
+            <form action="{{ route('procesarRegistro') }}" method="POST">
                     @csrf
                 <div class="contact-info">
                     <h1 style="font-size: 15px;">Información personal</h1>
