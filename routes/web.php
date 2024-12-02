@@ -2,19 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVistas;
+use App\Http\Controllers\UsuarioController;
 
-// Vistas de usuarios
+// Rutas del controlador de vistas generales
 Route::get('/', [controladorVistas::class, 'home'])->name('rutahome');
 Route::get('/login', [controladorVistas::class, 'login'])->name('rutalogin');
 Route::get('/signup', [controladorVistas::class, 'signup'])->name('rutasignup');
-Route::post('/signup', [controladorVistas::class, 'guardarUsuario'])->name('procesarRegistro');
 Route::get('/flights', [controladorVistas::class, 'flights'])->name('rutavuelos');
 Route::get('/hotels', [controladorVistas::class, 'hotels'])->name('rutahoteles');
 
-// Vistas de administración
 Route::get('/flights-management', [controladorVistas::class, 'adminv'])->name('rutaadminv');
 Route::get('/hotels-management', [controladorVistas::class, 'adminh'])->name('rutaadminh');
 
-// Gestión de usuarios (CRUD)
-Route::get('/crud-users', [controladorVistas::class, 'mostrarUsuarios'])->name('crudUsers');
-Route::delete('/crud-users/{id}', [controladorVistas::class, 'eliminarUsuario'])->name('eliminarUsuario');
+// Rutas del CRUD de usuarios
+Route::get('/usuarios', [UsuarioController::class, 'index'])->name('rutaUsuarios');
+Route::get('/usuarios/create', [UsuarioController::class, 'create'])->name('rutaCrearUsuario');
+Route::post('/usuarios', [UsuarioController::class, 'store'])->name('rutaGuardarUsuario');
+Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy'])->name('rutaEliminarUsuario');
+
+Route::post('/signup', [UsuarioController::class, 'store'])->name('procesarRegistro');

@@ -23,7 +23,7 @@
                                 <strong>Email:</strong> {{ $usuario->email }} <br>
                                 <strong>Teléfono:</strong> {{ $usuario->telefono }}
                             </p>
-                            <form action="{{ route('eliminarUsuario', $usuario->id_usuario) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este usuario?');">
+                            <form action="{{ route('rutaEliminarUsuario', $usuario->id_usuario) }}" method="POST" class="d-inline" onsubmit="return confirm('¿Estás seguro de eliminar este usuario?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Eliminar</button>

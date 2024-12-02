@@ -8,20 +8,26 @@ use App\Http\Requests\validadorRegistro;
 
 class UsuarioController extends Controller
 {
-    // Mostrar la lista de usuarios
+    /**
+     * Display a listing of the users.
+     */
     public function index()
     {
         $usuarios = DB::table('usuarios')->get();
-        return view('managements.crud-user', ['usuarios' => $usuarios]);
+        return view('managements.crud-user', compact('usuarios'));
     }
 
-    // Mostrar formulario de creación (opcional, ya cubierto con el registro)
+    /**
+     * Show the form for creating a new user.
+     */
     public function create()
     {
-        return view('users.signup');
+        return view('managements.create-user'); // Crear esta vista para el formulario de creación
     }
 
-    // Guardar un nuevo usuario
+    /**
+     * Store a newly created user in storage.
+     */
     public function store(validadorRegistro $request)
     {
         DB::table('usuarios')->insert([
@@ -29,21 +35,22 @@ class UsuarioController extends Controller
             'apellido' => $request->input('lastname'),
             'email' => $request->input('email'),
             'telefono' => $request->input('phone'),
-            'contraseña' => bcrypt($request->input('password')), // Encriptar la contraseña
+            'contraseña' => bcrypt($request->input('password')),
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
         session()->flash('success', 'Usuario registrado exitosamente.');
-        return redirect()->route('crudUsers');
+        return redirect()->route('rutalogin');
     }
 
-    // Eliminar un usuario
+    /**
+     * Remove the specified user from storage.
+     */
     public function destroy($id)
     {
         DB::table('usuarios')->where('id_usuario', $id)->delete();
-
         session()->flash('success', 'Usuario eliminado correctamente.');
-        return redirect()->route('crudUsers');
+        return redirect()->route('rutaUsuarios');
     }
 }

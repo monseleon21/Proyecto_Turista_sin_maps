@@ -24,7 +24,7 @@
                     <li class="nav-item d-flex" style="gap: 50px;">
                         <a style="text-decoration: none; font-weight: bold;" href="{{ route('rutaadminv') }}">Vuelos</a>
                         <a style="text-decoration: none; font-weight: bold;" href="{{ route('rutaadminh') }}">Hospedajes</a>
-                        <a style="text-decoration: none; font-weight: bold;" href="{{ route('crudUsers') }}">Usuario View</a>
+                        <a style="text-decoration: none; font-weight: bold;" href="{{ route('rutaUsuarios') }}">Usuario View</a>
                     </li>
                 </ul>
             </div>  
