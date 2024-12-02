@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/js/app.js'])
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>@yield('titulo')</title>
     <style>
@@ -51,7 +50,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{{ route('rutainicio') }}">TuristaSinMaps <i class="bi bi-geo-alt fs-4"></i></a>
+          <a class="navbar-brand" href="{{ route('rutahome') }}">TuristaSinMaps <i class="bi bi-geo-alt fs-4"></i></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
