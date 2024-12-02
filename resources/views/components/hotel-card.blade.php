@@ -1,6 +1,6 @@
 <div class="tarjeta-hotel">
     <div class="img-hotel">
-        <img src="{{ $imagen }}" alt="Imagen del hotel">
+        <img src="{{ $imagen }}" alt="Imagen del hotel" >
     </div>
     <div class="info-hotel">
         <div class="info-ubicacion">

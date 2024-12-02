@@ -42,7 +42,7 @@
             </div>
         </form>
 
-        <form action="{{ route('rutahoteles') }}" method="GET">
+        <form action="{{ route('rutaHoteles') }}" method="GET">
             <div class="btn-container" id="hospedajes">
                 <div class="btn-l">
                     <div class="btn-top">
@@ -148,13 +148,13 @@
     </div>
 
     <div class="card-container">
-        <a href="" class="card-link">
+        <a href="{{ route('rutaHoteles') }}" class="card-link">
             <x-card titulo="Cancún" encabezado="" imagen="{{ asset('img/Cancun.jpg') }}">Reserva ahora, paga despues</x-card>
         </a>
-        <a href="" class="card-link">
+        <a href="{{ route('rutaHoteles') }}" class="card-link">
             <x-card titulo="Puerto Vallarta" encabezado="" imagen="{{ asset('img/PuertoV.jpg') }}">Hasta 18 meses sin intereses</x-card>
         </a>
-        <a href="" class="card-link">
+        <a href="{{ route('rutaHoteles') }}" class="card-link">
             <x-card titulo="Jalisco" encabezado="" imagen="{{ asset('img/Jalisco.jpg') }}">Reserva ahora, paga despues</x-card>
         </a>
     </div>

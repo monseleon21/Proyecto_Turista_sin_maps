@@ -89,17 +89,20 @@
                 </div>
             </form>
             
-        <x-hotel-card 
-            imagen="{{ asset('img/japan.png') }}" 
-            ubicacion="Tokio, Japón" 
-            nombreHotel="Hotel Sakura" 
-            direccion="123 Cherry Blossom St." 
-            calificacion="5 Estrellas" 
-            servicios="Wi-Fi, Spa, Piscina" 
-            precio="3,500 MXN" 
-            ultimosLugares="Últimos 3 lugares" 
-            rutaReserva="{{ route('rutalogin') }}" 
-        />
+        
+        @foreach($hoteles as $hotel)
+                <x-hotel-card 
+                    imagen="{{ asset('img/' . str_replace(' ', '', $hotel->nombreHotel) . '.png') }}" 
+                    ubicacion="{{ $hotel->ubicacion }}" 
+                    nombreHotel="{{ $hotel->nombreHotel }}" 
+                    direccion="{{ $hotel->direccion }}" 
+                    calificacion="{{ $hotel->calificacion }}" 
+                    servicios="{{ implode(', ', json_decode($hotel->servicios)) }}" 
+                    precio="{{ number_format($hotel->precio, 2) }} MXN" 
+                    ultimosLugares="{{ $hotel->disponibilidad > 0 ? 'Últimos ' . $hotel->disponibilidad . ' lugares' : 'Agotado' }}" 
+                    rutaReserva="{{ route('rutalogin') }}" 
+                />
+        @endforeach
 
         </div>
     </div>
